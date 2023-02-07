@@ -2,40 +2,45 @@
 import pictures as pc
 import random
 
+choice_list = ["rock", "paper", "scissors"]
+
 
 def game():
     computer_choice = random.randrange(1, 4)
     user_choice = input("Your choice is:  ").lower()
-    if computer_choice == 1:
-        if user_choice == 'rock':
-            print(f"It's DRAW. User {pc.ROCK} vs computer {pc.ROCK}")
-            return 0
-        elif user_choice == "paper":
-            print(f"It's WIN. User {pc.PAPER} vs computer {pc.ROCK}")
-            return 1
-        else:
-            print(f"You are LOSE. User {pc.SCISSORS} vs computer {pc.ROCK}")
-            return 2
-    if computer_choice == 2:
-        if user_choice == 'rock':
-            print(f"You are LOSE. User {pc.ROCK} vs computer {pc.PAPER}")
-            return 2
-        elif user_choice == "paper":
-            print(f"It's DRAW. User {pc.PAPER} vs computer {pc.PAPER}")
-            return 0
-        else:
-            print(f"You WIN. User {pc.SCISSORS} vs computer {pc.PAPER}")
-            return 1
-    if computer_choice == 3:
-        if user_choice == 'rock':
-            print(f"You WIN. User {pc.ROCK} vs computer {pc.SCISSORS}")
-            return 1
-        elif user_choice == "paper":
-            print(f"You are LOSE. User {pc.PAPER} vs computer {pc.SCISSORS}")
-            return 2
-        else:
-            print(f"It's DRAW. User {pc.SCISSORS} vs computer {pc.SCISSORS}")
-            return 0
+    if user_choice in choice_list:
+        if computer_choice == 1:
+            if user_choice == 'rock':
+                print(f"It's DRAW. User {pc.ROCK} vs computer {pc.ROCK}")
+                return 0
+            elif user_choice == "paper":
+                print(f"It's WIN. User {pc.PAPER} vs computer {pc.ROCK}")
+                return 1
+            else:
+                print(f"You are LOSE. User {pc.SCISSORS} vs computer {pc.ROCK}")
+                return 2
+        if computer_choice == 2:
+            if user_choice == 'rock':
+                print(f"You are LOSE. User {pc.ROCK} vs computer {pc.PAPER}")
+                return 2
+            elif user_choice == "paper":
+                print(f"It's DRAW. User {pc.PAPER} vs computer {pc.PAPER}")
+                return 0
+            else:
+                print(f"You WIN. User {pc.SCISSORS} vs computer {pc.PAPER}")
+                return 1
+        if computer_choice == 3:
+            if user_choice == 'rock':
+                print(f"You WIN. User {pc.ROCK} vs computer {pc.SCISSORS}")
+                return 1
+            elif user_choice == "paper":
+                print(f"You are LOSE. User {pc.PAPER} vs computer {pc.SCISSORS}")
+                return 2
+            else:
+                print(f"It's DRAW. User {pc.SCISSORS} vs computer {pc.SCISSORS}")
+                return 0
+    else:
+        print("Something wrong")
 
 
 game_status = True
