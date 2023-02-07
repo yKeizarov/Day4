@@ -1,3 +1,3 @@
-ROCK = "⛰"
+ROCK = "🔳"
 PAPER = "📄"
 SCISSORS = "✂️"
