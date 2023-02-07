@@ -40,7 +40,8 @@ def game():
                 print(f"It's DRAW. User {pc.SCISSORS} vs computer {pc.SCISSORS}")
                 return 0
     else:
-        print("Something wrong")
+        print("Please, choice around: ROCK, PAPER or SCISSORS. ")
+        return 404
 
 
 game_status = True
@@ -59,6 +60,8 @@ if __name__ == '__main__':
         elif result == 0:
             user_count = user_count
             computer_count = computer_count
+        else:
+            pass
         control_question = int(input(f"Now result: USER-{user_count} vs COMPUTER-{computer_count}. "
                                  f"Do you play again? 1 - YES, 2 - NO. "))
         if control_question == 2:
