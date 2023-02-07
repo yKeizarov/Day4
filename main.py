@@ -1,6 +1,6 @@
 # Project: Rock, Paper, Scissors
 
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    main()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
