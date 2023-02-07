@@ -2,8 +2,6 @@
 import pictures
 from pictures import ROCK, SCISSORS, PAPER
 
-
-
 print(pictures.ROCK)
 print(pictures.SCISSORS)
 print(pictures.PAPER)
