@@ -62,6 +62,7 @@ if __name__ == '__main__':
             computer_count = computer_count
         else:
             pass
+
         control_question = int(input(f"Now result: USER-{user_count} vs COMPUTER-{computer_count}. "
                                  f"Do you play again? 1 - YES, 2 - NO. "))
         if control_question == 2:
