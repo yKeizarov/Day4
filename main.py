@@ -53,28 +53,31 @@ if __name__ == '__main__':
     print("Welcome to game.")
     while game_status:
         result = game()
-        if result == 1:
-            user_count += 1
-        elif result == 2:
-            computer_count += 1
-        elif result == 0:
-            user_count = user_count
-            computer_count = computer_count
-        else:
-            pass
+        if result == 0 or result == 1 or result == 2:
+            if result == 1:
+                user_count += 1
+            elif result == 2:
+                computer_count += 1
+            elif result == 0:
+                user_count = user_count
+                computer_count = computer_count
+            else:
+                pass
 
-        control_question = int(input(f"Now result: USER-{user_count} vs COMPUTER-{computer_count}. "
-                                 f"Do you play again? 1 - YES, 2 - NO. "))
-        if control_question == 2:
-            if user_count > computer_count:
-                print(f"Final result: USER-{user_count} vs COMPUTER-{computer_count}. "
-                      f"Congratulations, YOU WIN!")
-                game_status = False
-            elif user_count < computer_count:
-                print(f"Final result: USER-{user_count} vs COMPUTER-{computer_count}. "
-                      f"YOU LOSE...")
-                game_status = False
-            elif user_count == computer_count:
-                print(f"Final result: USER-{user_count} vs COMPUTER-{computer_count}. "
-                      f"Congratulations, IT'S DRAW!")
-                game_status = False
+            control_question = int(input(f"Now result: USER-{user_count} vs COMPUTER-{computer_count}. "
+                                     f"Do you play again? 1 - YES, 2 - NO. "))
+            if control_question == 2:
+                if user_count > computer_count:
+                    print(f"Final result: USER-{user_count} vs COMPUTER-{computer_count}. "
+                          f"Congratulations, YOU WIN!")
+                    game_status = False
+                elif user_count < computer_count:
+                    print(f"Final result: USER-{user_count} vs COMPUTER-{computer_count}. "
+                          f"YOU LOSE...")
+                    game_status = False
+                elif user_count == computer_count:
+                    print(f"Final result: USER-{user_count} vs COMPUTER-{computer_count}. "
+                          f"Congratulations, IT'S DRAW!")
+                    game_status = False
+        else:
+            continue
