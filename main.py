@@ -66,18 +66,22 @@ if __name__ == '__main__':
 
             control_question = int(input(f"Now result: USER-{user_count} vs COMPUTER-{computer_count}. "
                                      f"Do you play again? 1 - YES, 2 - NO. "))
-            if control_question == 2:
-                if user_count > computer_count:
-                    print(f"Final result: USER-{user_count} vs COMPUTER-{computer_count}. "
-                          f"Congratulations, YOU WIN!")
-                    game_status = False
-                elif user_count < computer_count:
-                    print(f"Final result: USER-{user_count} vs COMPUTER-{computer_count}. "
-                          f"YOU LOSE...")
-                    game_status = False
-                elif user_count == computer_count:
-                    print(f"Final result: USER-{user_count} vs COMPUTER-{computer_count}. "
-                          f"Congratulations, IT'S DRAW!")
-                    game_status = False
+            if control_question == 1 or control_question == 2:
+                if control_question == 2:
+                    if user_count > computer_count:
+                        print(f"Final result: USER-{user_count} vs COMPUTER-{computer_count}. "
+                              f"Congratulations, YOU WIN!")
+                        game_status = False
+                    elif user_count < computer_count:
+                        print(f"Final result: USER-{user_count} vs COMPUTER-{computer_count}. "
+                              f"YOU LOSE...")
+                        game_status = False
+                    elif user_count == computer_count:
+                        print(f"Final result: USER-{user_count} vs COMPUTER-{computer_count}. "
+                              f"Congratulations, IT'S DRAW!")
+                        game_status = False
+            else:
+                control_question = input("Your choice is incorrect. Please make the right choice. ")
+                continue
         else:
             continue
