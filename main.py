@@ -50,7 +50,7 @@ computer_count = 0
 
 
 if __name__ == '__main__':
-    print("Welcome to game.")
+    print(f"WELCOME TO GAME: ROCK-{pc.ROCK}, PAPER-{pc.PAPER}, SCISSORS-{pc.SCISSORS}. ")
     while game_status:
         result = game()
         if result == 0 or result == 1 or result == 2:
